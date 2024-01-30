@@ -35,9 +35,16 @@ void loop() {
   Braccio.ServoMovement(5,           0,  90, 10, 90, 90,  10);  //STRETCHES STRAIGHT
   Braccio.ServoMovement(20,           0,  90, 10, 90, 90,  70);   //GRIPPER CLOSES
   Braccio.ServoMovement(20,           0,  90, 10, 90, 180,  70); // GRIPPER TWISTS
-  Braccio.ServoMovement(20,           0,  90, 10, 90, 180,  70); // ARM BENDS AT ELBOW
-  Braccio.ServoMovement(20,           180,  90, 10, 90, 90,  70); // BASE ROTATES
-  Braccio.ServoMovement(20,           180,  90, 10, 90, 90,  10); // GRIPPER OPENS
+
+  
+  Braccio.ServoMovement(20,           0,  90, 45, 180, 90,  70); // STANDARD POSITION
+
+
+  
+  Braccio.ServoMovement(20,           180,  120, 30, 10, 90,  70); // BASE ROTATES
+  Braccio.ServoMovement(20,           180,  120, 30, 10, 90,  10); // GRIPPER OPENS
+
+  Braccio.ServoMovement(20,           0,  90, 45, 180, 90,  10); // STANDARD POSITION
 
 
   //Wait 1 second
