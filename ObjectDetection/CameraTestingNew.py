@@ -17,9 +17,9 @@ focal_length_px = IMAGE_WIDTH / (2.0 * math.tan(FOV_RADIANS / 2.0))
 # GStreamer pipeline for 720p webcam capture
 pipeline_str = (
     "v4l2src device=/dev/video0 ! "
-    "video/x-raw, width=(int)1280, height=(int)720, framerate=(fraction)30/1 ! "
     "videoconvert ! "
     "videoscale ! "
+    "video/x-raw, width=640, height=480 ! "
     "appsink"
 )
 
