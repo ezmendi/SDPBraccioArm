@@ -15,16 +15,10 @@ FOV_RADIANS = math.radians(FOV_DEGREES)
 focal_length_px = IMAGE_WIDTH / (2.0 * math.tan(FOV_RADIANS / 2.0))
 
 # GStreamer pipeline for 720p webcam capture
-pipeline_str = (
-    "v4l2src device=/dev/video0 ! "
-    "videoconvert ! "
-    "videoscale ! "
-    "video/x-raw, width=640, height=480 ! "
-    "appsink"
-)
+
 
 # Initialize video capture with GStreamer pipeline
-cap = cv2.VideoCapture(pipeline_str, cv2.CAP_GSTREAMER)
+cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
     print("Error: Could not open GStreamer pipeline.")
